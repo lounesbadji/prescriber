@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
 var user_schema_1 = require("../../schema/user/user.schema");
-var CryptoJS = require("crypto-js");
-var UserDAO = /** @class */ (function () {
+var CryptoJS = require('crypto-js');
+var UserDAO = (function () {
     function UserDAO() {
     }
     UserDAO.getUsers = function (callback) {

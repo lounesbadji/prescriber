@@ -29,7 +29,7 @@ if (env === 'development') {
 }
 
 //Connection to mongoose
-let uri = 'mongodb://localhost:27017/prescriber';
+let uri = 'mongodb://uujzlnyve5ljx1t:cVD2FZYIY7IVm5Bg9H8H@bsuzveblc1e274i-mongodb.services.clever-cloud.com:27017/bsuzveblc1e274i';
 mongoose.connect(uri);
 
 ////////////
@@ -53,8 +53,8 @@ app.get('/users', UsersRoute.getUsers);
 app.post('/user/update', UsersRoute.updateUser);
 
 
-app.listen(3000, ()=>{
-    console.log("Demo Express server listening on port %d in %s mode", 3000, app.settings.env);
+app.listen(8080, ()=>{
+    console.log("Demo Express server listening on port %d in %s mode", 8080, app.settings.env);
 });
 
 export var App = app;

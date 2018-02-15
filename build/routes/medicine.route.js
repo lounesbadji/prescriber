@@ -1,7 +1,6 @@
 "use strict";
-exports.__esModule = true;
 var medicine_dao_1 = require("../mongo/dao/medicine/medicine.dao");
-var MedicineRoute = /** @class */ (function () {
+var MedicineRoute = (function () {
     function MedicineRoute() {
     }
     MedicineRoute.addMedicines = function (req, res) {

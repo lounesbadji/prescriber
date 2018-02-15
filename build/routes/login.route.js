@@ -1,8 +1,7 @@
 "use strict";
-exports.__esModule = true;
-var CryptoJS = require("crypto-js");
+var CryptoJS = require('crypto-js');
 var user_dao_1 = require("../mongo/dao/user/user.dao");
-var LoginRoute = /** @class */ (function () {
+var LoginRoute = (function () {
     function LoginRoute() {
     }
     LoginRoute.login = function (req, res) {
