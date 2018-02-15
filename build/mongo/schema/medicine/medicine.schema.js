@@ -1,4 +1,5 @@
 "use strict";
+exports.__esModule = true;
 var mongoose = require("mongoose");
 exports.Schema = mongoose.Schema;
 exports.Mixed = mongoose.Schema.Types.Mixed;
