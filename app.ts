@@ -9,7 +9,7 @@ import {LoginRoute} from "./routes/login.route";
 import {UsersRoute} from "./routes/users.route";
 import {MedicineRoute} from "./routes/medicine.route";
 
-var app = express();
+let app = express();
 
 // Configuration
 app.use((req, res, next)=>{
@@ -23,7 +23,9 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(express.static(__dirname + '/public'));
 
-var env = process.env.NODE_ENV || 'development';
+let env = process.env.NODE_ENV || 'development';
+let port = process.env.PORT || 3000;
+
 if (env === 'development') {
     app.use(errorHandler());
 }
@@ -53,8 +55,8 @@ app.get('/users', UsersRoute.getUsers);
 app.post('/user/update', UsersRoute.updateUser);
 
 
-app.listen(3000, ()=>{
-    console.log("Demo Express server listening on port %d in %s mode", 3000, app.settings.env);
+app.listen(port, () => {
+    console.log("Demo Express server listening on port %d in %s mode", port, app.settings.env);
 });
 
 export var App = app;

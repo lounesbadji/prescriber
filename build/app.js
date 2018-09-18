@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(express.static(__dirname + '/public'));
 var env = process.env.NODE_ENV || 'development';
+var port = process.env.PORT || 3000;
 if (env === 'development') {
     app.use(errorHandler());
 }
@@ -41,8 +42,8 @@ app.post('/medicine/add', medicine_route_1.MedicineRoute.addMedicines);
 app.get('/user', users_route_1.UsersRoute.getUser);
 app.get('/users', users_route_1.UsersRoute.getUsers);
 app.post('/user/update', users_route_1.UsersRoute.updateUser);
-app.listen(3000, function () {
-    console.log("Demo Express server listening on port %d in %s mode", 3000, app.settings.env);
+app.listen(port, function () {
+    console.log("Demo Express server listening on port %d in %s mode", port, app.settings.env);
 });
 exports.App = app;
 //# sourceMappingURL=app.js.map
