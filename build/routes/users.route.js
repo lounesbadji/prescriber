@@ -1,6 +1,7 @@
 "use strict";
+exports.__esModule = true;
 var user_dao_1 = require("../mongo/dao/user/user.dao");
-var UsersRoute = (function () {
+var UsersRoute = /** @class */ (function () {
     function UsersRoute() {
     }
     UsersRoute.getUsers = function (req, res) {

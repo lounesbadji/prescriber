@@ -1,4 +1,5 @@
 "use strict";
+exports.__esModule = true;
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
@@ -25,7 +26,7 @@ if (env === 'development') {
     app.use(errorHandler());
 }
 //Connection to mongoose
-var uri = 'mongodb://uujzlnyve5ljx1t:cVD2FZYIY7IVm5Bg9H8H@bsuzveblc1e274i-mongodb.services.clever-cloud.com:27017/bsuzveblc1e274i';
+var uri = 'mongodb://url7k8yjugcwtyf:Xkakr86UIRP6ma3momdc@bshogbnqmgtjmdo-mongodb.services.clever-cloud.com:27017/bshogbnqmgtjmdo';
 mongoose.connect(uri);
 ////////////
 // Routes //
@@ -40,8 +41,8 @@ app.post('/medicine/add', medicine_route_1.MedicineRoute.addMedicines);
 app.get('/user', users_route_1.UsersRoute.getUser);
 app.get('/users', users_route_1.UsersRoute.getUsers);
 app.post('/user/update', users_route_1.UsersRoute.updateUser);
-app.listen(8080, function () {
-    console.log("Demo Express server listening on port %d in %s mode", 8080, app.settings.env);
+app.listen(3000, function () {
+    console.log("Demo Express server listening on port %d in %s mode", 3000, app.settings.env);
 });
 exports.App = app;
 //# sourceMappingURL=app.js.map

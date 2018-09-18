@@ -1,6 +1,7 @@
 "use strict";
+exports.__esModule = true;
 var medicine_schema_1 = require("../../schema/medicine/medicine.schema");
-var MedicineDAO = (function () {
+var MedicineDAO = /** @class */ (function () {
     function MedicineDAO() {
     }
     MedicineDAO.setMedicines = function (medicines, callback) {
