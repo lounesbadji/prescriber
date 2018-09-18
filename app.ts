@@ -24,7 +24,6 @@ app.use(methodOverride());
 app.use(express.static(__dirname + '/public'));
 
 let env = process.env.NODE_ENV || 'development';
-let port = process.env.PORT || 3000;
 
 if (env === 'development') {
     app.use(errorHandler());
@@ -55,8 +54,8 @@ app.get('/users', UsersRoute.getUsers);
 app.post('/user/update', UsersRoute.updateUser);
 
 
-app.listen(port, () => {
-    console.log("Demo Express server listening on port %d in %s mode", port, app.settings.env);
+app.listen(8080, () => {
+    console.log("Demo Express server listening on port %d in %s mode", 8080, app.settings.env);
 });
 
 export var App = app;
